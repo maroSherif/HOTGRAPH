@@ -1,96 +1,80 @@
-/* Utility Classes */
+/* Fonts */
 
 
-@font-face {
+/* @font-face {
     font-family: "Title-Font";
-    src: url(Inferno-L3nPD.ttf);
+    src: url(Attachments/Fonts/Inferno-L3nPD.ttf);
 }
 
 @font-face {
     font-family: "Content-Font";
-    src: url(merriweather.regular.ttf);
+    src: url(Attachments/Fonts/merriweather.regular.ttf);
+} */
+
+@font-face {
+    font-family: "myFont";
+    src: url(Attachments/Fonts/AstroSpace-eZ2Bg.ttf);
 }
+
+/* Variables */
 
 :root {
     --yellow: #f2ae30;
     --black: #000;
     --brown: #a62f03;
+    --red: #bb0a1e;
 }
+
+/* Scrollbar */
 
 ::-webkit-scrollbar {
     width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #fff;
+    background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--yellow), var(--brown), var(--black));
+    background: var(--red);
     border-radius: 5rem;
 }
+
+/* All the page */
 
 * {
     margin: 0;
     padding: 0;
+    /* scroll-padding-top: 35svh; */
     box-sizing: border-box;
-    font-family: "Content-Font";
+    font-family: "myFont";
+    scroll-behavior: smooth;
 }
 
 body {
     background: linear-gradient(to top, var(--yellow), var(--brown), var(--black));
 }
 
-/* Nav */
-
-nav {
-    width: 90%;
-    margin: 30px auto 55px;
-    border: 2px #fff solid;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 25px;
-    /* position: sticky;
-    top: 30px;
-    z-index: 1000; */
-    animation: scroll-top ease-in-out 1s both;
-}
-
-nav p {
-    color: #fff;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-nav > div {
-    background-color: #fff;
-    border-radius: 50%;
-    height: 25px;
-    aspect-ratio: 1 / 1;
-}
-
-/* Nav Animation */
-
-@keyframes scroll-top {
-    from {
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+a {
+    text-decoration: none;
 }
 
 /* Header */
 
 header {
+    min-height: 100svh;
+    align-content: center;
     text-align: center;
+    position: relative;
 }
 
-header > h1 {
+
+#welcomText {
+    align-content: center;
+}
+
+
+header h1 {
     color: #fff;
     text-transform: capitalize;
     font-size: 32px;
@@ -103,19 +87,96 @@ header div {
     color: #000;
     text-transform: capitalize;
     display: inline-block;
+    cursor: pointer;
+    align-content: center;
     border-radius: 50px;
     padding: 3px 8px;
     font-size: 12px;
-    margin-top: 10px;
     letter-spacing: 1px;
     font-weight: 600;
+}
+
+/* Nav */
+
+nav {
+    height: 50px;
+    width: 90%;
+    margin: 30px auto 0;
+    border: 2px #fff solid;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    animation: scroll-top ease-in-out 1s both;
+}
+
+nav a {
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+    nav a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    nav a {
+        font-size: 10px;
+    }
+
+    nav {
+        height: 35px;
+        padding: 0 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav a {
+        font-size: 8px;
+    }
+}
+
+/* Nav Animation */
+
+@keyframes scroll-top {
+    from {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Latest Projects */
 
 #latest-projects {
+    min-height: 100svh;
     width: 90%;
     margin: 110px auto 30px;
+}
+
+#latest-projects p {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 21px;
+}
+
+#latest-projects p a {
+    color: #fff;
 }
 
 .swiper-wrapper {
@@ -132,6 +193,44 @@ header div {
     border-radius: 20px;
 }
 
+/* Products */
+
+#products {
+    min-height: 100svh;
+    width: 90%;
+    margin: 110px auto 30px;
+}
+
+#products p {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 21px;
+}
+
+#products p a {
+    color: #fff;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#products .swiper-slide {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border: 2px #fff solid;
+    border-radius: 20px;
+}
+
+/* Services & Contact Info */
+
+.services-contactInfo {
+    min-height: 100svh;
+}
+
 /* Services */
 
 #services {
@@ -145,6 +244,8 @@ header div {
     color: #000;
     text-transform: capitalize;
     display: inline-block;
+    cursor: pointer;
+    align-content: center;
     border-radius: 50px;
     padding: 3px 15px;
     font-size: 12px;
@@ -157,7 +258,7 @@ header div {
 .services-item {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .services-item p {
@@ -165,7 +266,9 @@ header div {
     color: #000;
     text-transform: capitalize;
     align-content: center;
+    text-align: center;
     display: inline-block;
+    cursor: pointer;
     border-radius: 50px;
     padding: 3px 15px;
     font-size: 12px;
@@ -186,6 +289,8 @@ header div {
     color: #000;
     text-transform: capitalize;
     display: inline-block;
+    cursor: pointer;
+    align-content: center;
     border-radius: 30px;
     padding: 6px 20px;
     font-size: 12px;
@@ -197,8 +302,10 @@ header div {
 
 #arrow {
     text-align: center;
-    position: relative;
-    bottom: 2px;
+}
+
+#arrow img {
+    height: 64px;
 }
 
 /* Fire Image */
@@ -226,8 +333,8 @@ footer div p {
 }
 
 footer div p a {
-    text-decoration: none;
     color: #000;
+    position: relative;
 }
 
 footer img {
@@ -275,7 +382,7 @@ footer img {
 
 .scroll-right {
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(-250px);
     transition: 2s;
 }
 

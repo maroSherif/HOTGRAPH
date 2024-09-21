@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: "Title-Font";
-    src: url(Attachments/Fonts/Inferno-L3nPD.ttf);
+    src: url(Inferno-L3nPD.ttf);
 }
 
 @font-face {
     font-family: "Content-Font";
-    src: url(Attachments/Fonts/merriweather.regular.ttf);
+    src: url(merriweather.regular.ttf);
 }
 
 :root {

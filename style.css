@@ -62,7 +62,7 @@ a {
 /* Header */
 
 header {
-    min-height: 100svh;
+    min-height: 100dvh;
     align-content: center;
     text-align: center;
     position: relative;
@@ -163,7 +163,7 @@ nav a {
 /* Latest Projects */
 
 #latest-projects {
-    min-height: 100svh;
+    min-height: 100dvh;
     width: 90%;
     margin: 110px auto 30px;
 }
@@ -196,7 +196,7 @@ nav a {
 /* Products */
 
 #products {
-    min-height: 100svh;
+    min-height: 100dvh;
     width: 90%;
     margin: 110px auto 30px;
 }
@@ -228,7 +228,7 @@ nav a {
 /* Services & Contact Info */
 
 .services-contactInfo {
-    min-height: 100svh;
+    min-height: 100dvh;
 }
 
 /* Services */
